@@ -2223,8 +2223,11 @@ nav ul li {
 		button:disabled,
 		.button.disabled,
 		.button:disabled {
+			line-height: 2.75em;
+			height: 2.75em;
+			padding: 0 1em;
 			pointer-events: none;
-			opacity: 0.25;
+			opacity: 0.65;
 		}
 
 	input[type="submit"],
@@ -2233,8 +2236,8 @@ nav ul li {
 	button,
 	.button {
 		background-color: transparent;
-		box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.997);
-		color: #000000 !important;
+		box-shadow: inset 0 0 0 1px rgba(82, 2, 114, 0.997);
+		color: #710088 !important;
 	}
 
 		input[type="submit"]:hover,
@@ -2243,7 +2246,7 @@ nav ul li {
 		button:hover,
 		.button:hover {
 			box-shadow: inset 0 0 0 2px #377A6E;
-			color: #78377a !important;
+			color: #037888 !important;
 		}
 
 		input[type="submit"]:active,
@@ -2261,9 +2264,9 @@ nav ul li {
 		input[type="button"].primary,
 		button.primary,
 		.button.primary {
-			background-color: #000000;
+			background-color: #075664d0;
 			box-shadow: none;
-			color: #ffffff !important;
+			color: #f4f5d0 !important;
 		}
 
 			input[type="submit"].primary:hover,
@@ -2279,7 +2282,7 @@ nav ul li {
 			input[type="button"].primary:active,
 			button.primary:active,
 			.button.primary:active {
-				background-color: #1ebdd1;
+				background-color: #0a8d9e;
 			}
 
 /* Form */
