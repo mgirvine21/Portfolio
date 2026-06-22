@@ -2751,6 +2751,10 @@ nav ul li {
 			padding-left: 0.5rem;
 		}
 
+		ul li::marker {
+			content: "✦";
+		}
+
 		ul.alt {
 			list-style: none;
 			padding-left: 0;
@@ -2814,6 +2818,7 @@ nav ul li {
 	}
 
 		ul.actions li {
+			list-style: none;
 			padding: 0 0 0 1rem;
 			vertical-align: middle;
 		}
