@@ -18,6 +18,26 @@
 						<div class="content">
 							<h2>✦ Custom Graphics Engine ✦</h2>
 							<p>A fully functional <b>real-time 3D graphics engine</b>  built from scratch in <b>C++ using DirectX 11</b> , developed over the course of an <b>advanced graphics programming course</b> . The engine supports a complete rendering pipeline including <b>physically-based shading, dynamic lighting, shadow mapping, and a custom content pipeline</b>. Constructed incrementally from a blank Visual Studio project to a <b>playable, hardware-accelerated build</b>.</p>
+							<p>Key Features: Box Blur Post-Processing · Multi-Mode Fog System · Height-Based Fog · DirectX 11 Rendering Pipeline · Custom OBJ Mesh Loader · PBR Shading & Gamma Correction · Normal & Cube Map Support · Shadow Mapping · Real-Time Camera System · Dear ImGui Debug Interface · Playable Build</p>
+							<p>Overview: A fully functional real-time 3D graphics engine built from scratch in C++ using DirectX 11, developed over the course of an advanced graphics programming course. The engine supports a complete rendering pipeline including physically-based shading, dynamic lighting, shadow mapping, and a custom content pipeline. Constructed incrementally from a blank Visual Studio project to a playable, hardware-accelerated build.</p>
+							<p><b>Contributions:</b></p>
+				<ul class="infobull">
+					<li>Architected a DirectX 11 rendering pipeline from scratch in C++, managing the full D3D11 object structure including devices, swap chains, and render targets.</li>
+					<li>Implemented mesh loading and rendering via a custom OBJ loader, supporting textured 3D models with material assignments.</li>
+					<li>Built a constant buffer system for efficient GPU data transfer, enabling per-object and per-frame shader data updates.</li>
+					<li>Developed a scene camera system with configurable projection and view matrices, supporting real-time user-controlled navigation.</li>
+					<li>Authored HLSL vertex and fragment shaders supporting albedo textures, normal maps, and cube map environment reflections.</li>
+					<li>Implemented a physically-based rendering (PBR) shading model with gamma correction for perceptually accurate material response under multiple light types.</li>
+					<li>Constructed a shadow mapping pipeline producing real-time dynamic shadows cast across scene geometry.</li>
+					<li>Integrated Dear ImGui for a runtime debug UI, enabling live inspection and adjustment of scene parameters during development.</li>
+					<li>Managed a full content pipeline including texture loading, sky/environment setup, and asset organization within Visual Studio.</li>
+					<li>Implemented a box blur post-processing effect as a full-screen screen-space pass, with a runtime-adjustable blur radius exposed through the ImGui debug interface.</li>
+					<li>Built a multi-mode fog post-processing system supporting linear, smoothstep, and exponential falloff modes, with runtime controls for fog color, start/end distances, and density. Extended the system with optional height-based fog driven by configurable vertical density and fog height thresholds.</li>
+				</ul>
+				<p><b>Impact:</b></p>
+				<ul class="infobull">
+					<li>Hey! Set this up.</li>
+				</ul>
 							<ul class="actions stacked">
 								<li><a href="index.html#engine" class="button">Go Back</a></li>
 							</ul>
