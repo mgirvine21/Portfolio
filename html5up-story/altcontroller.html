@@ -1,50 +1,124 @@
-<!DOCTYPE HTML>
-<!--
-	Story by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>MG Irvine - Alt Game Controller</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="icon" type="image/png" href="images/irvine_imgs/dragon_favicon.png"/>
-	</head>
-	<body class="is-preload">
-        <section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
-						<div class="content">
-							<h2>✦ Alt Game Controller ✦</h2>
-							<h3> tools and technologies:</h3>
-							<p>yoo do this</p>
-							<p>Key Features: Accessibility Awareness Design · Flex Sensor Input Mapping · Accelerometer Joystick Control · Iterative Hardware Prototyping · Live Game Validation</p>
-							<p>Overview: A wearable glove-based game controller built to simulate the accessibility challenges faced by disabled gamers. By deliberately designing an unconventional and uncomfortable input device, the project builds empathy among players and developers for the importance of inclusive design in gaming.</p>
-				<a href="https://www.rit.edu/verticallyintegratedprojects/peaceland-choose-your-memory" class="button">Link: Vertically Intergrated Project</a>
-            	<p><b>Contributions:</b></p>
-				<ul class="infobull">
-					<h4>Art & Design</h4>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Alt Game Controller — MG Irvine</title>
+	<meta name="description" content="Case study: a wearable glove-based game controller designed to build empathy for accessible game design." />
+	<link rel="icon" type="image/png" href="images/irvine_imgs/dragon_favicon.png" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+
+	<a class="skip-link" href="#main">Skip to content</a>
+
+	<header class="site-header">
+		<div class="header-inner">
+			<a href="index.html" class="brand">
+				<img src="images/irvine_imgs/pfp.png" alt="" class="brand-mark" width="40" height="40" />
+				<span class="brand-text">MG Irvine</span>
+			</a>
+			<button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation">
+				<span></span><span></span><span></span>
+			</button>
+			<nav class="primary-nav" id="primaryNav">
+				<ul>
+					<li><a href="index.html#about">About</a></li>
+					<li><a href="index.html#experience">Experience</a></li>
+					<li><a href="index.html#projects">Projects</a></li>
+					<li><a href="index.html#art-2d">2D Art</a></li>
+					<li><a href="index.html#art-3d">3D Art</a></li>
+					<li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main id="main">
+		<section class="section" style="padding-top: 3.5rem;">
+			<div class="section-inner">
+				<a href="index.html#projects" class="button-outline button" style="margin-bottom: 2rem;">&larr; All projects</a>
+
+				<p class="eyebrow">Case Study</p>
+				<h1 style="font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 3.4rem); margin-bottom: 0.3em;">Alt Game Controller</h1>
+				<p class="role-tags">
+					<span>Programmer</span><span>Artist</span>
+				</p>
+
+				<p style="max-width: 72ch; font-size: 1.05rem; color: var(--ink-soft); margin-top: 1.5rem;">
+					<strong>Overview:</strong> A wearable glove-based game controller built to simulate
+					the accessibility challenges faced by disabled gamers. By deliberately designing an
+					unconventional and uncomfortable input device, the project builds empathy among
+					players and developers for the importance of inclusive design in gaming.
+				</p>
+			</div>
+		</section>
+
+		<section class="section section-alt">
+			<div class="section-inner">
+				<h2>Key Features</h2>
+				<ul style="color: var(--ink-soft); padding-left: 1.2rem; columns: 2; column-gap: 2.5rem;">
+					<li>Accessibility-awareness design</li>
+					<li>Flex sensor input mapping</li>
+					<li>Accelerometer joystick control</li>
+					<li>Iterative hardware prototyping</li>
+					<li>Live game validation</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="section-inner">
+				<div class="gallery-grid reveal" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+					<img src="images/irvine_imgs/altglove3.jpg" alt="Alt Game Controller glove, flex sensors and wiring detail" loading="lazy" style="border-radius: var(--radius); aspect-ratio: 4/3; object-fit: cover;" />
+					<img src="images/irvine_imgs/altglove4.jpg" alt="Alt Game Controller glove, assembled" loading="lazy" style="border-radius: var(--radius); aspect-ratio: 4/3; object-fit: cover;" />
+				</div>
+			</div>
+		</section>
+
+		<section class="section section-alt">
+			<div class="section-inner">
+				<h2>Contributions</h2>
+
+				<h3 style="margin-top: 1.5rem; font-size: 1rem; color: var(--violet);">Art &amp; Design</h3>
+				<ul style="color: var(--ink-soft); padding-left: 1.2rem;">
 					<li>Designed and iterated on multiple controller layouts, narrowing from a two-handed full-button scheme down to a focused 3 flex sensor, 2 button, and accelerometer configuration.</li>
-					<li> Physically constructed and reworked the glove, securing breadboards with Velcro and hot glue, and stabilizing flex sensors with sewn wire supports and finger sleeve covers.</li>
-					<li> Refined sensor consistency by adding sleeve covers that held flex sensors in place, improving input reliability</li>
-					<br><h4>Development</h4>
-					<li> Integrated flex sensors onto the center three fingers, mapping bend input to ABXY and Start buttons.</li>
+					<li>Physically constructed and reworked the glove, securing breadboards with Velcro and hot glue, and stabilizing flex sensors with sewn wire supports and finger sleeve covers.</li>
+					<li>Refined sensor consistency by adding sleeve covers that held flex sensors in place, improving input reliability.</li>
+				</ul>
+
+				<h3 style="margin-top: 1.5rem; font-size: 1rem; color: var(--violet);">Development</h3>
+				<ul style="color: var(--ink-soft); padding-left: 1.2rem;">
+					<li>Integrated flex sensors onto the center three fingers, mapping bend input to ABXY and Start buttons.</li>
 					<li>Mounted an accelerometer/tilt sensor to the top of the hand for left joystick control.</li>
-					<li>Tested and validated the controller in a live game environment, successfully completing a level in Duck Game.</li>
+					<li>Tested and validated the controller in a live game environment, successfully completing a level in <em>Duck Game</em>.</li>
 				</ul>
-				<p><b>Impact:</b></p>
-				<ul class="infobull">
-					<li>Modular rig architecture enables combinatorial customization without additional modeling work per variant.</li>
-					<li>Reduced cross-discipline handoff friction by handling 3D production and systems integration.</li>
-					<li>Navigated a full engine migration mid-project, delivering a working holographic build under time constraint.</li>
-				</ul>
-							<ul class="actions stacked">
-								<li><a href="index.html#tiles" class="button">Go Back</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/irvine_imgs/gameart-Bugbox-logo.png" alt="" />
-						</div>
-					</section>
-    </body>
+
+				<h2 style="margin-top: 2.5rem;">Impact</h2>
+				<p style="color: var(--ink-soft);"><em>Add impact details here.</em></p>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="section-inner footer-inner">
+			<a href="index.html" class="brand">
+				<img src="images/irvine_imgs/pfp.png" alt="" class="brand-mark" width="32" height="32" />
+				<span class="brand-text">MG Irvine</span>
+			</a>
+			<ul class="social-row" aria-label="Social links">
+				<li><a href="https://www.linkedin.com/in/mg-irvine-a17644217/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a></li>
+				<li><a href="https://www.instagram.com/wyrmwings/?hl=en" target="_blank" rel="noopener" aria-label="Instagram">ig</a></li>
+				<li><a href="https://x.com/wyrmwings" target="_blank" rel="noopener" aria-label="Twitter / X">x</a></li>
+				<li><a href="mailto:mgirvine21@gmail.com" aria-label="Email">@</a></li>
+			</ul>
+			<p class="footer-note">&copy; 2026 MG Irvine</p>
+		</div>
+	</footer>
+
+	<script src="assets/js/main.js" defer></script>
+</body>
+</html>

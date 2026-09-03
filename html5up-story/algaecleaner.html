@@ -1,50 +1,136 @@
-<!DOCTYPE HTML>
-<!--
-	Story by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>MG Irvine - Algae Cleaner: Tank Sim</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="icon" type="image/png" href="images/irvine_imgs/dragon_favicon.png"/>
-	</head>
-	<body class="is-preload">
-        <section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
-						<div class="content">
-							<h2>✦ Algae Cleaner: Tank Sim ✦</h2>
-							<h3>Tools & Technologies: P5.JS, GLSL, WebGL, Procreate</h3>
-							<p>You are a snail trying to clean your fish tank. Move your mouse around to eat the algae and prevent the tank from building up too much green! 'Left-click' to make some bubbles!</p>
-							<p>Key Features: Procedural Metaball Algae Growth · Dynamic Algae Vignette Feedback · L-System Seaweed with Boundary Detection · Click-Spawned Bubble Particles · Original 2D Assets · Contained Tank Environment</p>
-							<p>Overview: Algae Cleaner is an interactive fish tank simulation built in p5.js where players control a snail suctioned to the inside of a tank's glass, eating procedurally growing algae blobs before they overtake the environment. The project combines custom generative art systems, player-driven interaction, and original hand-drawn assets into a cohesive, contained ecosystem.</p>
-				<a href="https://editor.p5js.org/mgirvine21/sketches/qQSTtBYEL" class="button">Link: P5.js Sketch</a>
-            	<p><b>Contributions:</b></p>
-				<ul class="infobull">
-					<h4>Art & Design</h4>
-					<li> Implemented a metaball system where algae blobs grow, oscillate, and bridge neighboring blobs with bezier curves to create organic fluid shapes.</li>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Algae Cleaner: Tank Sim — MG Irvine</title>
+	<meta name="description" content="Case study: a p5.js fish tank simulation with procedural algae growth, built and designed by MG Irvine." />
+	<link rel="icon" type="image/png" href="images/irvine_imgs/dragon_favicon.png" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+
+	<a class="skip-link" href="#main">Skip to content</a>
+
+	<header class="site-header">
+		<div class="header-inner">
+			<a href="index.html" class="brand">
+				<img src="images/irvine_imgs/pfp.png" alt="" class="brand-mark" width="40" height="40" />
+				<span class="brand-text">MG Irvine</span>
+			</a>
+			<button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation">
+				<span></span><span></span><span></span>
+			</button>
+			<nav class="primary-nav" id="primaryNav">
+				<ul>
+					<li><a href="index.html#about">About</a></li>
+					<li><a href="index.html#experience">Experience</a></li>
+					<li><a href="index.html#projects">Projects</a></li>
+					<li><a href="index.html#art-2d">2D Art</a></li>
+					<li><a href="index.html#art-3d">3D Art</a></li>
+					<li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main id="main">
+		<section class="section" style="padding-top: 3.5rem;">
+			<div class="section-inner">
+				<a href="index.html#projects" class="button-outline button" style="margin-bottom: 2rem;">&larr; All projects</a>
+
+				<p class="eyebrow">Case Study</p>
+				<h1 style="font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 3.4rem); margin-bottom: 0.3em;">Algae Cleaner: Tank Sim</h1>
+				<p class="role-tags">
+					<span>Developer</span><span>Artist</span>
+				</p>
+
+				<div class="chip-row" style="margin: 1rem 0 2.5rem;">
+					<li>p5.js</li><li>GLSL</li><li>WebGL</li><li>Procreate</li>
+				</div>
+
+				<p style="max-width: 72ch; font-size: 1.05rem; color: var(--ink-soft);">
+					You are a snail suctioned to the inside of a fish tank. Move your mouse to steer
+					and eat the algae before it takes over — left-click to blow a few bubbles.
+				</p>
+				<p style="max-width: 72ch; font-size: 1.05rem; color: var(--ink-soft);">
+					<strong>Overview:</strong> Algae Cleaner is an interactive fish tank simulation
+					built in p5.js where players control a snail eating procedurally growing algae
+					blobs before they overtake the environment. The project combines custom generative
+					art systems, player-driven interaction, and original hand-drawn assets into a
+					cohesive, contained ecosystem.
+				</p>
+
+				<a href="https://editor.p5js.org/mgirvine21/sketches/qQSTtBYEL" target="_blank" rel="noopener" class="button button-outline" style="margin-top: 1rem;">Play the p5.js sketch</a>
+			</div>
+		</section>
+
+		<section class="section section-alt">
+			<div class="section-inner">
+				<h2>Key Features</h2>
+				<ul style="color: var(--ink-soft); padding-left: 1.2rem; columns: 2; column-gap: 2.5rem;">
+					<li>Procedural metaball algae growth</li>
+					<li>Dynamic algae vignette feedback</li>
+					<li>L-system seaweed with boundary detection</li>
+					<li>Click-spawned bubble particles</li>
+					<li>Original 2D assets</li>
+					<li>Contained tank environment</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="section-inner">
+				<div class="gallery-grid reveal" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+					<img src="images/irvine_imgs/project-algeacleaner-move.gif" alt="Algae Cleaner tank scene" loading="lazy" style="border-radius: var(--radius); aspect-ratio: 4/3; object-fit: contain; background: var(--surface); padding: 1.5rem;" />
+					<img src="images/irvine_imgs/project-algeacleaner.gif" alt="Algae Cleaner tank scene" loading="lazy" style="border-radius: var(--radius); aspect-ratio: 4/3; object-fit: contain; background: var(--surface); padding: 1.5rem;" />
+				</div>
+			</div>
+		</section>
+
+		<section class="section section-alt">
+			<div class="section-inner">
+				<h2>Contributions</h2>
+
+				<h3 style="margin-top: 1.5rem; font-size: 1rem; color: var(--violet);">Art &amp; Design</h3>
+				<ul style="color: var(--ink-soft); padding-left: 1.2rem;">
+					<li>Implemented a metaball system where algae blobs grow, oscillate, and bridge neighboring blobs with bezier curves to create organic fluid shapes.</li>
 					<li>Built a radial gradient vignette that grows greener as the algae array fills, providing passive feedback on tank cleanliness without UI elements.</li>
 					<li>Drew original fish, snail, and environmental assets across a full layered tank scene.</li>
-					<br><h4>Development</h4>
-					<li> Integrated an L-system seaweed renderer with boundary detection to prevent branches from escaping tank walls.</li>
+				</ul>
+
+				<h3 style="margin-top: 1.5rem; font-size: 1rem; color: var(--violet);">Development</h3>
+				<ul style="color: var(--ink-soft); padding-left: 1.2rem;">
+					<li>Integrated an L-system seaweed renderer with boundary detection to prevent branches from escaping tank walls.</li>
 					<li>Added click-to-spawn bubble particles and a persistent snail trail to reinforce the player's presence on the glass.</li>
 					<li>Wrote a reusable parametric star function supporting straight-edged and bezier-curved styles for decorative particle details.</li>
 				</ul>
-				<p><b>Impact:</b></p>
-				<ul class="infobull">
-					<li>yooo do this</li>
-				</ul>
 
-				
-							<ul class="actions stacked">
-								<li><a href="index.html#tiles" class="button">Go Back</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/irvine_imgs/gameart-Bugbox-logo.png" alt="" />
-						</div>
-					</section>
-    </body>
+				<h2 style="margin-top: 2.5rem;">Impact</h2>
+				<p style="color: var(--ink-soft);"><em>Add impact details here.</em></p>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="section-inner footer-inner">
+			<a href="index.html" class="brand">
+				<img src="images/irvine_imgs/pfp.png" alt="" class="brand-mark" width="32" height="32" />
+				<span class="brand-text">MG Irvine</span>
+			</a>
+			<ul class="social-row" aria-label="Social links">
+				<li><a href="https://www.linkedin.com/in/mg-irvine-a17644217/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a></li>
+				<li><a href="https://www.instagram.com/wyrmwings/?hl=en" target="_blank" rel="noopener" aria-label="Instagram">ig</a></li>
+				<li><a href="https://x.com/wyrmwings" target="_blank" rel="noopener" aria-label="Twitter / X">x</a></li>
+				<li><a href="mailto:mgirvine21@gmail.com" aria-label="Email">@</a></li>
+			</ul>
+			<p class="footer-note">&copy; 2026 MG Irvine</p>
+		</div>
+	</footer>
+
+	<script src="assets/js/main.js" defer></script>
+</body>
+</html>
