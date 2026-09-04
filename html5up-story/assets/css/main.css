@@ -13,6 +13,7 @@
    10. Contact / footer
    11. Buttons & chips
    12. Motion & responsive
+   13. Case-study hero + masonry gallery + lightbox
    ========================================================= */
 
 /* ---------- 1. Tokens & reset ---------- */
@@ -96,7 +97,7 @@ p:last-child { margin-bottom: 0; }
 }
 
 /* ---------- 3. Layout helpers ---------- */
-.section { padding: 5.5rem 0; }
+.section { padding: 2.5rem 0; }
 .section-alt { background: var(--bg-alt); }
 .section-inner {
 	max-width: var(--max);
@@ -184,7 +185,7 @@ p:last-child { margin-bottom: 0; }
 
 /* ---------- 5. Hero ---------- */
 .hero {
-	padding: 4.5rem 0 5rem;
+	padding: 3rem 0 3.5rem;
 	background: linear-gradient(180deg, var(--bg-alt), var(--bg));
 	overflow: hidden;
 }
@@ -195,7 +196,7 @@ p:last-child { margin-bottom: 0; }
 	display: grid;
 	grid-template-columns: 1.1fr 0.9fr;
 	align-items: center;
-	gap: 3rem;
+	gap: 2.25rem;
 }
 .hero h1 {
 	font-size: clamp(3rem, 6vw, 4.5rem);
@@ -261,7 +262,7 @@ p:last-child { margin-bottom: 0; }
 .about-grid {
 	display: grid;
 	grid-template-columns: 1.15fr 0.85fr;
-	gap: 3.5rem;
+	gap: 2.5rem;
 	align-items: start;
 }
 .skills-panel {
@@ -298,7 +299,7 @@ p:last-child { margin-bottom: 0; }
 /* ---------- 7. Experience timeline ---------- */
 .timeline {
 	list-style: none;
-	margin: 2.5rem 0 0;
+	margin: 1.75rem 0 0;
 	padding: 0;
 	border-left: 2px solid var(--line);
 }
@@ -334,9 +335,9 @@ p:last-child { margin-bottom: 0; }
 .spotlight {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 3rem;
+	gap: 2.25rem;
 	align-items: center;
-	margin: 3.5rem 0;
+	margin: 2.5rem 0;
 }
 .spotlight-reverse .spotlight-media { order: 2; }
 .spotlight-reverse .spotlight-copy { order: 1; }
@@ -374,7 +375,7 @@ p:last-child { margin-bottom: 0; }
 	font-weight: 500;
 }
 
-.side-projects { margin-top: 5rem; }
+.side-projects { margin-top: 3rem; }
 .side-projects h3 { margin-bottom: 1.5rem; }
 .project-grid {
 	display: grid;
@@ -404,8 +405,8 @@ p:last-child { margin-bottom: 0; }
 .project-card-body p:last-child { font-size: 0.9rem; color: var(--ink-soft); }
 
 /* ---------- 9. Galleries ---------- */
-.gallery-group { margin-top: 3rem; }
-.gallery-group:first-of-type { margin-top: 2rem; }
+.gallery-group { margin-top: 2rem; }
+.gallery-group:first-of-type { margin-top: 1.25rem; }
 .gallery-group h3 { margin-bottom: 1rem; color: var(--ink-soft); font-size: 1.05rem; }
 .gallery-grid {
 	display: grid;
@@ -472,10 +473,10 @@ img, svg { max-width: 100%; height: auto; }
 
 /* ~1024px — tablet: tighten the outer rhythm, nothing restructures yet */
 @media (max-width: 1024px) {
-	.section { padding: 4.5rem 0; }
-	.hero-inner { gap: 2.25rem; }
-	.spotlight { gap: 2.25rem; }
-	.about-grid { gap: 2.5rem; }
+	.section { padding: 2.25rem 0; }
+	.hero-inner { gap: 2rem; }
+	.spotlight { gap: 2rem; }
+	.about-grid { gap: 2rem; }
 }
 
 /* ~900px — stack the two-column layouts */
@@ -515,11 +516,11 @@ img, svg { max-width: 100%; height: auto; }
 	.primary-nav li:last-child a { border-bottom: none; }
 	.nav-cta { display: inline-block; margin-top: 0.5rem; }
 
-	.section { padding: 3.5rem 0; }
+	.section { padding: 2rem 0; }
 	.section-inner { padding: 0 1.25rem; }
 	.header-inner { padding: 0.85rem 1.25rem; }
 
-	.hero { padding: 3rem 0 3.5rem; }
+	.hero { padding: 2.25rem 0 2.75rem; }
 	.hero h1 { font-size: clamp(2.5rem, 10vw, 3.4rem); }
 	.hero-lede { font-size: 1.05rem; }
 
@@ -535,7 +536,7 @@ img, svg { max-width: 100%; height: auto; }
 
 /* ~560px — small phones: stack action groups, simplify spacing */
 @media (max-width: 560px) {
-	.section { padding: 3rem 0; }
+	.section { padding: 1.75rem 0; }
 	.section-inner { padding: 0 1.1rem; }
 
 	.hero-actions,
@@ -549,11 +550,11 @@ img, svg { max-width: 100%; height: auto; }
 	.about-grid { gap: 1.75rem; }
 	.skills-panel { padding: 1.5rem 1.35rem; }
 
-	.spotlight { margin: 2.5rem 0; gap: 1.5rem; }
+	.spotlight { margin: 1.75rem 0; gap: 1.5rem; }
 	.spotlight-copy h3 { font-size: 1.5rem; }
 
-	.timeline { margin-top: 2rem; }
-	.timeline-item { padding-bottom: 1.75rem; }
+	.timeline { margin-top: 1.25rem; }
+	.timeline-item { padding-bottom: 1.25rem; }
 
 	.gallery-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.6rem; }
 	.project-grid { grid-template-columns: 1fr; }
@@ -573,3 +574,96 @@ img, svg { max-width: 100%; height: auto; }
 	.gallery-grid { grid-template-columns: repeat(2, 1fr); }
 	.gallery-item { padding: 0.4rem; }
 }
+
+/* ---------- 13. Case-study hero + masonry gallery + lightbox ---------- */
+
+/* Two-column intro for case-study pages: copy left, feature image right.
+   Fills the space that used to sit empty next to the title block. */
+.case-hero {
+	display: grid;
+	grid-template-columns: 1.15fr 0.85fr;
+	gap: 2rem;
+	align-items: center;
+}
+.case-hero-copy .role-tags { margin-top: 0.75rem; }
+.case-hero-media {
+	display: flex;
+	justify-content: center;
+}
+.case-hero-media img {
+	width: 100%;
+	border-radius: var(--radius);
+	box-shadow: var(--shadow);
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+}
+.case-hero-media-contain img {
+	object-fit: contain;
+	background: var(--surface);
+	padding: 0.5rem;
+}
+
+@media (max-width: 900px) {
+	.case-hero { grid-template-columns: 1fr; }
+	.case-hero-media { order: -1; }
+}
+
+/* Masonry gallery: for pages with 10+ images. Uses CSS columns instead of
+   a row grid so every image keeps its natural aspect ratio (no cropping)
+   and the layout packs tightly by height instead of wasting space on
+   uniform tiles. Pairs with the lightbox below for full-size viewing. */
+.masonry-gallery {
+	columns: 3 280px;
+	column-gap: 1rem;
+}
+.masonry-gallery img {
+	width: 100%;
+	display: block;
+	margin: 0 0 0.75rem;
+	border-radius: var(--radius);
+	break-inside: avoid;
+	box-shadow: var(--shadow);
+	cursor: zoom-in;
+	transition: transform 0.2s ease;
+}
+.masonry-gallery img:hover { transform: translateY(-2px); }
+
+@media (max-width: 720px) {
+	.masonry-gallery { columns: 2 160px; column-gap: 0.75rem; }
+	.masonry-gallery img { margin-bottom: 0.75rem; }
+}
+@media (max-width: 480px) {
+	.masonry-gallery { columns: 1; }
+}
+
+/* Lightbox: click any masonry image to view it full-size. */
+.lightbox {
+	position: fixed;
+	inset: 0;
+	z-index: 300;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+	background: rgba(20, 28, 28, 0.92);
+}
+.lightbox.is-open { display: flex; }
+.lightbox img {
+	max-width: 90vw;
+	max-height: 90vh;
+	border-radius: 10px;
+	box-shadow: var(--shadow);
+}
+.lightbox-close {
+	position: absolute;
+	top: 1.5rem;
+	right: 1.75rem;
+	background: none;
+	border: none;
+	color: #fff;
+	font-size: 2.25rem;
+	line-height: 1;
+	cursor: pointer;
+	padding: 0.25rem 0.5rem;
+}
+.lightbox-close:hover { color: var(--gold); }

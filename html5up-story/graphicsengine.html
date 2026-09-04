@@ -38,30 +38,36 @@
 	</header>
 
 	<main id="main">
-		<section class="section" style="padding-top: 3.5rem;">
-			<div class="section-inner">
-				<a href="index.html#projects" class="button-outline button" style="margin-bottom: 2rem;">&larr; All projects</a>
+		<section class="section" style="padding: 2.25rem 0 0.75rem;">
+			<div class="section-inner case-hero">
+				<div class="case-hero-copy">
+					<a href="index.html#projects" class="button-outline button" style="margin-bottom: 2rem;">&larr; All projects</a>
 
-				<p class="eyebrow">Case Study</p>
-				<h1 style="font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 3.4rem); margin-bottom: 0.3em;">Custom Graphics Engine</h1>
-				<p class="role-tags">
-					<span>Graphics Engine Developer</span><span>Rendering Programmer</span>
-				</p>
+					<p class="eyebrow">Case Study</p>
+					<h1 style="font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 3.4rem); margin-bottom: 0.3em;">Custom Graphics Engine</h1>
+					<p class="role-tags">
+						<span>Graphics Engine Developer</span><span>Rendering Programmer</span>
+					</p>
 
-				<div class="chip-row" style="margin: 1rem 0 2.5rem;">
-					<li>DirectX 11</li><li>C++</li><li>HLSL</li><li>Dear ImGui</li><li>Visual Studio</li><li>GitHub</li>
+					<div class="chip-row" style="margin: 1rem 0 2.5rem;">
+						<li>DirectX 11</li><li>C++</li><li>HLSL</li><li>Dear ImGui</li><li>Visual Studio</li><li>GitHub</li>
+					</div>
+
+					<p style="max-width: 72ch; font-size: 1.05rem; color: var(--ink-soft);">
+						<strong>Overview:</strong> A fully functional real-time 3D graphics engine built from
+						scratch in C++ using DirectX 11, developed over the course of an advanced graphics
+						programming course. The engine supports a complete rendering pipeline including
+						physically-based shading, dynamic lighting, shadow mapping, and a custom content
+						pipeline. Constructed incrementally from a blank Visual Studio project to a playable,
+						hardware-accelerated build.
+					</p>
+
+					<a href="https://github.com/mgirvine21/D3D11Starter" target="_blank" rel="noopener" class="button button-outline" style="margin-top: 1rem;">View on GitHub</a>
 				</div>
 
-				<p style="max-width: 72ch; font-size: 1.05rem; color: var(--ink-soft);">
-					<strong>Overview:</strong> A fully functional real-time 3D graphics engine built from
-					scratch in C++ using DirectX 11, developed over the course of an advanced graphics
-					programming course. The engine supports a complete rendering pipeline including
-					physically-based shading, dynamic lighting, shadow mapping, and a custom content
-					pipeline. Constructed incrementally from a blank Visual Studio project to a playable,
-					hardware-accelerated build.
-				</p>
-
-				<a href="https://github.com/mgirvine21/D3D11Starter" target="_blank" rel="noopener" class="button button-outline" style="margin-top: 1rem;">View on GitHub</a>
+				<div class="case-hero-media case-hero-media-contain">
+					<img src="images/irvine_imgs/project-graphics-engine.gif" alt="Graphics Engine" loading="lazy" />
+				</div>
 			</div>
 		</section>
 
@@ -86,8 +92,11 @@
 
 		<section class="section">
 			<div class="section-inner">
-				<div class="gallery-grid reveal" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
-					<img src="images/irvine_imgs/project-graphics-engine.gif" alt="Real-time rendering demo from the custom DirectX 11 graphics engine" loading="lazy" style="border-radius: var(--radius); aspect-ratio: 4/3; object-fit: cover;" />
+				<p class="eyebrow" style="margin-bottom: 1rem;">Gallery</p>
+				<div class="masonry-gallery reveal">
+					<img src="images/irvine_imgs/project-graphics-small-blur.gif" alt="Real-time rendering demo from the custom DirectX 11 graphics engine" loading="lazy" style="border-radius: var(--radius); aspect-ratio: 4/3; object-fit: cover;" />
+					<img src="images/irvine_imgs/project-graphics-small-fog.gif" alt="Real-time rendering demo from the custom DirectX 11 graphics engine" loading="lazy" style="border-radius: var(--radius); aspect-ratio: 4/3; object-fit: cover;" />
+					<img src="images/irvine_imgs/project-graphics-small-light.gif" alt="Real-time rendering demo from the custom DirectX 11 graphics engine" loading="lazy" style="border-radius: var(--radius); aspect-ratio: 4/3; object-fit: cover;" />
 				</div>
 			</div>
 		</section>
