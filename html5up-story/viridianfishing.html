@@ -1,47 +1,131 @@
-<!DOCTYPE HTML>
-<!--
-	Story by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>MG Irvine - Viridian Fishing</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<link rel="icon" type="image/png" href="images/irvine_imgs/dragon_favicon.png"/>
-	</head>
-	<body class="is-preload">
-        <section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
-						<div class="content">
-							<h2>✦ Viridian Fishing ✦</h2>
-							<p>A <b>holographic idle simulation</b> for the <b>Looking Glass display</b>: a virtual ant farm where players customize modular low-poly bugs, observe emergent behaviors, and shape creature interactions in a playful terrarium sandbox. I developed <b>interchangeable bug assets, UI assets, and AI pathing systems</b> for bug movement.</p>
-							<p>Key Features: Bug Customization · Omnidirectional AI Pathfinding · Interactive Terrarium · Holographic Multi-Angle Viewing · Day/Night Cycles · Biome Variety</p>
-							<p>Overview: Bug Box is a holographic idle simulation built for the Looking Glass display, designed to mimic the wonder of a virtual ant farm. Players customize modular low-poly bugs, observe emergent behaviors within an interactive terrarium, and influence creature interactions in a playful sandbox environment.</p>
-				<a href="https://www.rit.edu/verticallyintegratedprojects/peaceland-choose-your-memory" class="button">Link: Vertically Intergrated Project</a>
-            	<p><b>Contributions:</b></p>
-				<ul class="infobull">
-					<h4>Art & Design</h4>
-					<li>Modeled and textured low-poly beetle, ant, and grasshopper rigs with interchangeable modular parts and customizable texture support.</li>
-					<li>Designed concept art establishing a colorful, approachable visual identity.</li>
-					<br><h4>Development</h4>
-					<li>Engineered bug AI with omnidirectional pathfinding and environment interaction systems.</li>
-					<li>Built player-facing UI for real-time bug customization.</li>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Viridian Fishing — MG Irvine</title>
+	<meta name="description" content="Case study: a stylized p5.js 3D scene with a custom GLSL dithering shader and procedural gradient noise." />
+	<link rel="icon" type="image/png" href="images/irvine_imgs/dragon_favicon.png" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
+
+	<a class="skip-link" href="#main">Skip to content</a>
+
+	<header class="site-header">
+		<div class="header-inner">
+			<a href="index.html" class="brand">
+				<img src="images/irvine_imgs/pfp.png" alt="" class="brand-mark" width="40" height="40" />
+				<span class="brand-text">MG Irvine</span>
+			</a>
+			<button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation">
+				<span></span><span></span><span></span>
+			</button>
+			<nav class="primary-nav" id="primaryNav">
+				<ul>
+					<li><a href="index.html#about">About</a></li>
+					<li><a href="index.html#experience">Experience</a></li>
+					<li><a href="index.html#projects">Projects</a></li>
+					<li><a href="index.html#art-2d">2D Art</a></li>
+					<li><a href="index.html#art-3d">3D Art</a></li>
+					<li><a href="index.html#contact" class="nav-cta">Contact</a></li>
 				</ul>
-				<p><b>Impact:</b></p>
-				<ul class="infobull">
-					<li>Modular rig architecture enables combinatorial customization without additional modeling work per variant.</li>
-					<li>Reduced cross-discipline handoff friction by handling 3D production and systems integration.</li>
-					<li>Navigated a full engine migration mid-project, delivering a working holographic build under time constraint.</li>
-				</ul>
-							<ul class="actions stacked">
-								<li><a href="index.html#tiles" class="button">Go Back</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/irvine_imgs/gameart-Bugbox-logo.png" alt="" />
-						</div>
-					</section>
-    </body>
+			</nav>
+		</div>
+	</header>
+
+	<main id="main">
+		<section class="section" style="padding-top: 3.5rem;">
+			<div class="section-inner">
+				<a href="index.html#projects" class="button-outline button" style="margin-bottom: 2rem;">&larr; All projects</a>
+
+				<p class="eyebrow">Case Study</p>
+				<h1 style="font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 3.4rem); margin-bottom: 0.3em;">Viridian Fishing</h1>
+				<p class="role-tags">
+					<span>Tech Artist</span><span>3D Artist</span>
+				</p>
+
+				<div class="chip-row" style="margin: 1rem 0 2.5rem;">
+					<li>JavaScript</li><li>P5.js</li><li>WebGL</li><li>GLSL</li><li>Autodesk Maya</li><li>Adobe Photoshop</li>
+				</div>
+
+				<p style="max-width: 72ch; font-size: 1.05rem; color: var(--ink-soft);">
+					<strong>Overview:</strong> Viridian Fishing (also shown as "Viridian Moonlight") is a
+					stylized 3D scene built in p5.js featuring a hand-crafted GLSL dithering shader and
+					procedural noise applied to low-poly geometry. The project depicts a moonlit pond
+					environment, combining an original fish model with reshaped primitives to create an
+					atmospheric, retro-inspired real-time scene. Players press E when a fish is within
+					reach to catch it, filling their bucket with their haul.
+				</p>
+
+				<p style="max-width: 72ch; font-size: 0.95rem; color: var(--ink-soft); margin-top: 1rem;">
+					<strong>Key Features:</strong> Custom GLSL Dithering Shader &middot; Procedural Gradient
+					Noise &middot; Original 3D Assets &middot; Low-Poly Scene Composition &middot; Orbital
+					Camera Control
+				</p>
+
+				<div style="margin-top: 1.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
+					<a href="https://editor.p5js.org/mgirvine21/sketches/uEEgcj0xP" class="button button-primary" target="_blank" rel="noopener">Play on P5.js</a>
+					<a href="https://github.com/mgirvine21/Dither-Shader-Simple-Fishing" class="button button-ghost" target="_blank" rel="noopener">View on GitHub</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="section section-alt">
+			<div class="section-inner">
+				<div class="gallery-grid reveal" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+					<img src="images/irvine_imgs/gameart-viridianfishing.png" alt="Viridian Fishing pond scene with dithering shader" loading="lazy" style="border-radius: var(--radius); aspect-ratio: 4/3; object-fit: cover;" />
+				</div>
+			</div>
+		</section>
+
+		<section class="section">
+			<div class="section-inner about-grid">
+				<div>
+					<h2>Contributions</h2>
+					<ul style="color: var(--ink-soft); padding-left: 1.2rem;">
+						<li>Researched and implemented a custom GLSL fragment shader producing a dithering effect that quantizes surface shading based on light intensity, replicating the pixelated look of early 3D graphics.</li>
+						<li>Adapted Inigo Quilez's gradient noise algorithm from The Book of Shaders to drive procedural surface coloring on 3D geometry in p5.js WebGL mode.</li>
+						<li>Modeled an original low-poly fish and constructed a full scene using stretched and transformed geometric primitives for lily pads, cattails, and a pond surface.</li>
+						<li>Iterated across two project phases — first establishing noise-driven color on a 3D model, then building the complete dithering pipeline and scene composition.</li>
+					</ul>
+
+					<h2 style="margin-top: 2.5rem;">Impact</h2>
+					<ul style="color: var(--ink-soft); padding-left: 1.2rem;">
+						<li>Delivered a fully custom shader pipeline in a browser-based sketch, without relying on any external rendering engine.</li>
+						<li>Established a reusable approach for combining procedural noise with hand-modeled assets in p5.js WebGL scenes.</li>
+					</ul>
+				</div>
+
+				<div class="skills-panel">
+					<h3>Quick facts</h3>
+					<p class="skills-list">Solo technical art project</p>
+					<h3>Team</h3>
+					<p class="skills-list">Individual project</p>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="section-inner footer-inner">
+			<a href="index.html" class="brand">
+				<img src="images/irvine_imgs/pfp.png" alt="" class="brand-mark" width="32" height="32" />
+				<span class="brand-text">MG Irvine</span>
+			</a>
+			<ul class="social-row" aria-label="Social links">
+				<li><a href="https://www.linkedin.com/in/mg-irvine-a17644217/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a></li>
+				<li><a href="https://www.instagram.com/wyrmwings/?hl=en" target="_blank" rel="noopener" aria-label="Instagram">ig</a></li>
+				<li><a href="https://x.com/wyrmwings" target="_blank" rel="noopener" aria-label="Twitter / X">x</a></li>
+				<li><a href="mailto:mgirvine21@gmail.com" aria-label="Email">@</a></li>
+			</ul>
+			<p class="footer-note">&copy; 2026 MG Irvine</p>
+		</div>
+	</footer>
+
+	<script src="assets/js/main.js" defer></script>
+</body>
+</html>
