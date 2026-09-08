@@ -38,39 +38,31 @@
 	</header>
 
 	<main id="main">
-		<section class="section" style="padding: 2.25rem 0 0.75rem;">
-			<div class="section-inner case-hero">
-				<div class="case-hero-copy">
-					<a href="index.html#projects" class="button-outline button" style="margin-bottom: 2rem;">&larr; All projects</a>
+		<section class="section" style="padding-top: 3.5rem;">
+			<div class="section-inner">
+				<a href="index.html#projects" class="button-outline button" style="margin-bottom: 2rem;">&larr; All projects</a>
 
-					<p class="eyebrow">Case Study</p>
-					<h1 style="font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 3.4rem); margin-bottom: 0.3em;">Blink</h1>
-					<p class="role-tags">
-						<span>Lead Artist</span><span>Puzzle Designer</span><span>Programmer</span>
-					</p>
+				<p class="eyebrow">Case Study</p>
+				<h1 style="font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 3.4rem); margin-bottom: 0.3em;">Blink</h1>
+				<p class="role-tags">
+					<span>Lead Artist</span><span>Puzzle Designer</span><span>Programmer</span>
+				</p>
 
-					<div class="chip-row" style="margin: 1rem 0 2.5rem;">
-						<li>MonoGame</li><li>C#</li><li>Procreate</li><li>Visual Studio</li><li>GitHub</li>
-					</div>
-
-					<p style="max-width: 60ch; font-size: 1.05rem; color: var(--ink-soft);">
-						Balance a limited light resource to scare off ravenous rats while completing a
-						puzzle to progress through levels.
-					</p>
-					<p style="max-width: 60ch; font-size: 0.95rem; color: var(--ink-soft); margin-top: 1rem;">
-						<strong>Overview:</strong> Blink is a horror puzzle game built in MonoGame and C#
-						where players must conserve a draining light resource to ward off ravenous rats
-						while solving environmental puzzles to progress through each level. The game
-						creates tension through the constant pressure of resource scarcity, forcing players
-						to prioritize when to spend light and when to endure the dark.
-					</p>
+				<div class="chip-row" style="margin: 1rem 0 2.5rem;">
+					<li>MonoGame</li><li>C#</li><li>Procreate</li><li>Visual Studio</li><li>GitHub</li>
 				</div>
 
-				<div class="case-hero-media">
-					<div class="embed-frame">
-						<iframe src="https://www.youtube.com/embed/BN-ktDP0lY8" title="Blink gameplay demo" loading="lazy" allowfullscreen></iframe>
-					</div>
-				</div>
+				<p style="max-width: 72ch; font-size: 1.05rem; color: var(--ink-soft);">
+					Balance a limited light resource to scare off ravenous rats while completing a
+					puzzle to progress through levels.
+				</p>
+				<p style="max-width: 72ch; font-size: 1.05rem; color: var(--ink-soft);">
+					<strong>Overview:</strong> Blink is a horror puzzle game built in MonoGame and C#
+					where players must conserve a draining light resource to ward off ravenous rats
+					while solving environmental puzzles to progress through each level. The game
+					creates tension through the constant pressure of resource scarcity, forcing players
+					to prioritize when to spend light and when to endure the dark.
+				</p>
 			</div>
 		</section>
 
@@ -89,13 +81,12 @@
 
 		<section class="section">
 			<div class="section-inner">
-				<p class="eyebrow" style="margin-bottom: 1rem;">Gallery</p>
-				<div class="masonry-gallery reveal">
-					<img src="images/irvine_imgs/GAMES/BLINK/gameart-blink-concept.jpg" alt="Concept art establishing Blink's horror environment" loading="lazy" />
-					<img src="images/irvine_imgs/GAMES/BLINK/gameart-blink-player.gif" alt="Blink player character animation" loading="lazy" />
-					<img src="images/irvine_imgs/GAMES/BLINK/gameart-blink-playerspritesheet.png" alt="Player character sprite sheet for Blink" loading="lazy" />
-					<img src="images/irvine_imgs/GAMES/BLINK/gameart-blink-ratspritesheet.png" alt="Rat enemy sprite sheet for Blink" loading="lazy" />
-					<img src="images/irvine_imgs/GAMES/BLINK/gameart-blink-walk.gif" alt="Blink player walk animation" loading="lazy" />
+				<div class="gallery-grid reveal" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+					<img src="images/irvine_imgs/GAMES/BLINK/gameart-blink-concept.jpg" alt="Blink placeholder art" loading="lazy" style="border-radius: var(--radius); aspect-ratio: 4/3; object-fit: contain; background: var(--surface); padding: 1.5rem;" />
+					<img src="images/irvine_imgs/GAMES/BLINK/gameart-blink-player.gif" alt="Blink placeholder art" loading="lazy" style="border-radius: var(--radius); aspect-ratio: 4/3; object-fit: contain; background: var(--surface); padding: 1.5rem;" />
+					<img src="images/irvine_imgs/GAMES/BLINK/gameart-blink-playerspritesheet.png" alt="Blink placeholder art" loading="lazy" style="border-radius: var(--radius); aspect-ratio: 4/3; object-fit: contain; background: var(--surface); padding: 1.5rem;" />
+					<img src="images/irvine_imgs/GAMES/BLINK/gameart-blink-ratspritesheet.png" alt="Blink placeholder art" loading="lazy" style="border-radius: var(--radius); aspect-ratio: 4/3; object-fit: contain; background: var(--surface); padding: 1.5rem;" />
+					<img src="images/irvine_imgs/GAMES/BLINK/gameart-blink-walk.gif" alt="Blink placeholder art" loading="lazy" style="border-radius: var(--radius); aspect-ratio: 4/3; object-fit: contain; background: var(--surface); padding: 1.5rem;" />
 				</div>
 			</div>
 		</section>
@@ -110,10 +101,7 @@
 				</ul>
 
 				<h2 style="margin-top: 2.5rem;">Impact</h2>
-				<ul style="color: var(--ink-soft); padding-left: 1.2rem;">
-					<li>Delivered a complete horror puzzle game in MonoGame, building the core light-resource mechanic, rat AI, and puzzle systems from scratch in C#.</li>
-					<li>Established a tension-driven resource system that ties survival and puzzle-solving into a single core loop.</li>
-				</ul>
+				<p style="color: var(--ink-soft);"><em>Add impact details here.</em></p>
 			</div>
 		</section>
 	</main>
@@ -134,42 +122,6 @@
 		</div>
 	</footer>
 
-
-	<div class="lightbox" id="lightbox" aria-hidden="true">
-		<button class="lightbox-close" id="lightboxClose" aria-label="Close image">\&times;</button>
-		<img src="" alt="" id="lightboxImg" />
-	</div>
-
 	<script src="assets/js/main.js" defer></script>
-	<script>
-		document.addEventListener('DOMContentLoaded', function () {
-			var lightbox = document.getElementById('lightbox');
-			var lightboxImg = document.getElementById('lightboxImg');
-			var closeBtn = document.getElementById('lightboxClose');
-
-			function openLightbox(img) {
-				lightboxImg.src = img.src;
-				lightboxImg.alt = img.alt;
-				lightbox.classList.add('is-open');
-				lightbox.setAttribute('aria-hidden', 'false');
-			}
-			function closeLightbox() {
-				lightbox.classList.remove('is-open');
-				lightbox.setAttribute('aria-hidden', 'true');
-				lightboxImg.src = '';
-			}
-
-			document.querySelectorAll('.masonry-gallery img').forEach(function (img) {
-				img.addEventListener('click', function () { openLightbox(img); });
-			});
-			closeBtn.addEventListener('click', closeLightbox);
-			lightbox.addEventListener('click', function (e) {
-				if (e.target === lightbox) closeLightbox();
-			});
-			document.addEventListener('keydown', function (e) {
-				if (e.key === 'Escape') closeLightbox();
-			});
-		});
-	</script>
 </body>
 </html>

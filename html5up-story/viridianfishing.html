@@ -38,67 +38,51 @@
 	</header>
 
 	<main id="main">
-		<section class="section" style="padding: 2.25rem 0 0.75rem;">
-			<div class="section-inner case-hero">
-				<div class="case-hero-copy">
-					<a href="index.html#projects" class="button-outline button" style="margin-bottom: 2rem;">&larr; All projects</a>
+		<section class="section" style="padding-top: 3.5rem;">
+			<div class="section-inner">
+				<a href="index.html#projects" class="button-outline button" style="margin-bottom: 2rem;">&larr; All projects</a>
 
-					<p class="eyebrow">Case Study</p>
-					<h1 style="font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 3.4rem); margin-bottom: 0.3em;">Viridian Fishing</h1>
-					<p class="role-tags">
-						<span>Tech Artist</span><span>3D Artist</span>
-					</p>
+				<p class="eyebrow">Case Study</p>
+				<h1 style="font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 3.4rem); margin-bottom: 0.3em;">Viridian Fishing</h1>
+				<p class="role-tags">
+					<span>Tech Artist</span><span>3D Artist</span>
+				</p>
 
-					<div class="chip-row" style="margin: 1rem 0 2.5rem;">
-						<li>JavaScript</li><li>P5.js</li><li>WebGL</li><li>GLSL</li><li>Autodesk Maya</li><li>Adobe Photoshop</li>
-					</div>
-
-					<p style="max-width: 60ch; font-size: 1.05rem; color: var(--ink-soft);">
-						<strong>Overview:</strong> Viridian Fishing (also shown as "Viridian Moonlight") is a
-						stylized 3D scene built in p5.js featuring a hand-crafted GLSL dithering shader and
-						procedural noise applied to low-poly geometry. The project depicts a moonlit pond
-						environment, combining an original fish model with reshaped primitives to create an
-						atmospheric, retro-inspired real-time scene. Press E when a fish is within reach to
-						catch it, filling your bucket with your haul.
-					</p>
-
-					<div style="margin-top: 1rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
-						<a href="https://editor.p5js.org/mgirvine21/sketches/uEEgcj0xP" class="button button-outline" target="_blank" rel="noopener">Open Full Sketch on p5.js</a>
-						<a href="https://github.com/mgirvine21/Dither-Shader-Simple-Fishing" class="button button-ghost" target="_blank" rel="noopener">View on GitHub</a>
-					</div>
+				<div class="chip-row" style="margin: 1rem 0 2.5rem;">
+					<li>JavaScript</li><li>P5.js</li><li>WebGL</li><li>GLSL</li><li>Autodesk Maya</li><li>Adobe Photoshop</li>
 				</div>
 
-				<div class="case-hero-media">
-					<div class="embed-frame embed-frame-sketch">
-						<iframe src="https://editor.p5js.org/mgirvine21/full/uEEgcj0xP" title="Viridian Fishing playable p5.js sketch" loading="lazy"></iframe>
-					</div>
+				<p style="max-width: 72ch; font-size: 1.05rem; color: var(--ink-soft);">
+					<strong>Overview:</strong> Viridian Fishing (also shown as "Viridian Moonlight") is a
+					stylized 3D scene built in p5.js featuring a hand-crafted GLSL dithering shader and
+					procedural noise applied to low-poly geometry. The project depicts a moonlit pond
+					environment, combining an original fish model with reshaped primitives to create an
+					atmospheric, retro-inspired real-time scene. Players press E when a fish is within
+					reach to catch it, filling their bucket with their haul.
+				</p>
+
+				<p style="max-width: 72ch; font-size: 0.95rem; color: var(--ink-soft); margin-top: 1rem;">
+					<strong>Key Features:</strong> Custom GLSL Dithering Shader &middot; Procedural Gradient
+					Noise &middot; Original 3D Assets &middot; Low-Poly Scene Composition &middot; Orbital
+					Camera Control
+				</p>
+
+				<div style="margin-top: 1.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
+					<a href="https://editor.p5js.org/mgirvine21/sketches/uEEgcj0xP" class="button button-primary" target="_blank" rel="noopener">Play on P5.js</a>
+					<a href="https://github.com/mgirvine21/Dither-Shader-Simple-Fishing" class="button button-ghost" target="_blank" rel="noopener">View on GitHub</a>
 				</div>
 			</div>
 		</section>
 
 		<section class="section section-alt">
 			<div class="section-inner">
-				<h2>Key Features</h2>
-				<ul style="color: var(--ink-soft); padding-left: 1.2rem; columns: 2; column-gap: 2.5rem;">
-					<li>Custom GLSL dithering shader</li>
-					<li>Procedural gradient noise</li>
-					<li>Original 3D assets</li>
-					<li>Low-poly scene composition</li>
-					<li>Orbital camera control</li>
-				</ul>
+				<div class="gallery-grid reveal" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+					<img src="images/irvine_imgs/gameart-viridianfishing.png" alt="Viridian Fishing pond scene with dithering shader" loading="lazy" style="border-radius: var(--radius); aspect-ratio: 4/3; object-fit: cover;" />
+				</div>
 			</div>
 		</section>
 
 		<section class="section">
-			<div class="section-inner">
-				<p class="eyebrow" style="margin-bottom: 1rem;">Gallery</p>
-				<div class="masonry-gallery reveal">
-					<img src="images/irvine_imgs/gameart-viridianfishing.png" alt="Viridian Fishing pond scene rendered with a custom GLSL dithering shader" loading="lazy" />
-				</div>
-			</div>
-		</section>
-
-		<section class="section section-alt">
 			<div class="section-inner about-grid">
 				<div>
 					<h2>Contributions</h2>
@@ -142,42 +126,6 @@
 		</div>
 	</footer>
 
-
-	<div class="lightbox" id="lightbox" aria-hidden="true">
-		<button class="lightbox-close" id="lightboxClose" aria-label="Close image">\&times;</button>
-		<img src="" alt="" id="lightboxImg" />
-	</div>
-
 	<script src="assets/js/main.js" defer></script>
-	<script>
-		document.addEventListener('DOMContentLoaded', function () {
-			var lightbox = document.getElementById('lightbox');
-			var lightboxImg = document.getElementById('lightboxImg');
-			var closeBtn = document.getElementById('lightboxClose');
-
-			function openLightbox(img) {
-				lightboxImg.src = img.src;
-				lightboxImg.alt = img.alt;
-				lightbox.classList.add('is-open');
-				lightbox.setAttribute('aria-hidden', 'false');
-			}
-			function closeLightbox() {
-				lightbox.classList.remove('is-open');
-				lightbox.setAttribute('aria-hidden', 'true');
-				lightboxImg.src = '';
-			}
-
-			document.querySelectorAll('.masonry-gallery img').forEach(function (img) {
-				img.addEventListener('click', function () { openLightbox(img); });
-			});
-			closeBtn.addEventListener('click', closeLightbox);
-			lightbox.addEventListener('click', function (e) {
-				if (e.target === lightbox) closeLightbox();
-			});
-			document.addEventListener('keydown', function (e) {
-				if (e.key === 'Escape') closeLightbox();
-			});
-		});
-	</script>
 </body>
 </html>

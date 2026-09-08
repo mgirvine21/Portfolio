@@ -59,13 +59,11 @@
 						customize modular low-poly bugs, observe emergent behaviors within an interactive
 						terrarium, and influence creature interactions in a playful sandbox environment.
 					</p>
-					<a href="https://www.youtube.com/watch?v=FYDx_7KwmO4" target="_blank" rel="noopener" class="button button-primary" style="margin-top: 1.25rem;">Watch on YouTube</a>
+					<a href="https://www.youtube.com/watch?v=FYDx_7KwmO4" target="_blank" rel="noopener" class="button button-primary" style="margin-top: 1.25rem;">See it in Action</a>
 				</div>
 
-				<div class="case-hero-media">
-					<div class="embed-frame">
-						<iframe src="https://www.youtube.com/embed/FYDx_7KwmO4" title="BugBox demo video" loading="lazy" allowfullscreen></iframe>
-					</div>
+				<div class="case-hero-media case-hero-media-contain">
+					<img src="images/irvine_imgs/3D/BUGBOX/gameart-Bugbox-logo.png" alt="BugBox logo and stylized bug illustration" loading="lazy" />
 				</div>
 			</div>
 		</section>
@@ -88,11 +86,11 @@
 			<div class="section-inner">
 				<p class="eyebrow" style="margin-bottom: 1rem;">Gallery</p>
 				<div class="masonry-gallery reveal">
-					<img src="images/irvine_imgs/3D/BUGBOX/3D-bugbox-concept1.png" alt="BugBox concept art establishing the bug customization visual style" loading="lazy" />
-					<img src="images/irvine_imgs/3D/BUGBOX/3D-bugbox-concept2.png" alt="BugBox concept art, alternate bug color and pattern designs" loading="lazy" />
-					<img src="images/irvine_imgs/3D/BUGBOX/3D-bugbox-model.gif" alt="3D low-poly bug model turnaround from BugBox" loading="lazy" />
-					<img src="images/irvine_imgs/3D/BUGBOX/3D-bugbox-model2.gif" alt="3D low-poly bug model turnaround from BugBox, alternate bug" loading="lazy" />
-					<img src="images/irvine_imgs/3D/BUGBOX/3D-bugbox-models.png" alt="Set of low-poly bug models used in BugBox" loading="lazy" />
+					<img src="images/irvine_imgs/3D/BUGBOX/3D-bugbox-concept1.png" alt="BugBox logo and stylized bug illustration" loading="lazy" style="border-radius: var(--radius); aspect-ratio: 4/3; object-fit: contain; background: var(--surface); padding: 1.5rem;" />
+					<img src="images/irvine_imgs/3D/BUGBOX/3D-bugbox-concept2.png" alt="BugBox logo and stylized bug illustration" loading="lazy" style="border-radius: var(--radius); aspect-ratio: 4/3; object-fit: contain; background: var(--surface); padding: 1.5rem;" />
+					<img src="images/irvine_imgs/3D/BUGBOX/3D-bugbox-model.gif" alt="3D bug model turnaround from BugBox" loading="lazy" style="border-radius: var(--radius); aspect-ratio: 4/3; object-fit: cover;" />
+					<img src="images/irvine_imgs/3D/BUGBOX/3D-bugbox-model2.gif" alt="3D bug model turnaround from BugBox" loading="lazy" style="border-radius: var(--radius); aspect-ratio: 4/3; object-fit: cover;" />
+					<img src="images/irvine_imgs/3D/BUGBOX/3D-bugbox-models.png" alt="3D bug model turnaround from BugBox" loading="lazy" style="border-radius: var(--radius); aspect-ratio: 4/3; object-fit: cover;" />
 				</div>
 			</div>
 		</section>
@@ -148,42 +146,6 @@
 		</div>
 	</footer>
 
-
-	<div class="lightbox" id="lightbox" aria-hidden="true">
-		<button class="lightbox-close" id="lightboxClose" aria-label="Close image">\&times;</button>
-		<img src="" alt="" id="lightboxImg" />
-	</div>
-
 	<script src="assets/js/main.js" defer></script>
-	<script>
-		document.addEventListener('DOMContentLoaded', function () {
-			var lightbox = document.getElementById('lightbox');
-			var lightboxImg = document.getElementById('lightboxImg');
-			var closeBtn = document.getElementById('lightboxClose');
-
-			function openLightbox(img) {
-				lightboxImg.src = img.src;
-				lightboxImg.alt = img.alt;
-				lightbox.classList.add('is-open');
-				lightbox.setAttribute('aria-hidden', 'false');
-			}
-			function closeLightbox() {
-				lightbox.classList.remove('is-open');
-				lightbox.setAttribute('aria-hidden', 'true');
-				lightboxImg.src = '';
-			}
-
-			document.querySelectorAll('.masonry-gallery img').forEach(function (img) {
-				img.addEventListener('click', function () { openLightbox(img); });
-			});
-			closeBtn.addEventListener('click', closeLightbox);
-			lightbox.addEventListener('click', function (e) {
-				if (e.target === lightbox) closeLightbox();
-			});
-			document.addEventListener('keydown', function (e) {
-				if (e.key === 'Escape') closeLightbox();
-			});
-		});
-	</script>
 </body>
 </html>
