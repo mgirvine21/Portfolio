@@ -14,6 +14,7 @@
    11. Buttons & chips
    12. Motion & responsive
    13. Case-study hero + masonry gallery + lightbox
+   14. Embeds (video / playable demos)
    ========================================================= */
 
 /* ---------- 1. Tokens & reset ---------- */
@@ -87,6 +88,10 @@ h2 { font-size: clamp(1.9rem, 3vw, 2.6rem); }
 h3 { font-size: 1.3rem; }
 p { margin: 0 0 1em; max-width: 62ch; }
 p:last-child { margin-bottom: 0; }
+
+ul li::marker {
+	content: "✦ "
+}
 
 .eyebrow {
 	font-family: var(--font-pixel);
@@ -667,3 +672,42 @@ img, svg { max-width: 100%; height: auto; }
 	padding: 0.25rem 0.5rem;
 }
 .lightbox-close:hover { color: var(--gold); }
+/* ---------- 14. Embeds (video / playable demos) ---------- */
+
+/* 16:9 video embed (YouTube). Use inside .case-hero-media in place of an
+   <img>, or standalone inside .embed-grid. */
+.embed-frame {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	border-radius: var(--radius);
+	overflow: hidden;
+	box-shadow: var(--shadow);
+	background: #10171a;
+}
+.embed-frame iframe {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	display: block;
+}
+
+/* Taller aspect for playable p5.js sketches, whose canvases usually run
+   closer to square/portrait than a video does. */
+.embed-frame-sketch {
+	aspect-ratio: 4 / 3;
+}
+
+/* Side-by-side embeds, e.g. two demo videos for one project. Stacks on
+   small screens automatically. */
+.embed-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 1.5rem;
+}
+
+@media (max-width: 720px) {
+	.embed-grid { gap: 1rem; }
+}

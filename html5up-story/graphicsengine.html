@@ -119,7 +119,10 @@
 				</ul>
 
 				<h2 style="margin-top: 2.5rem;">Impact</h2>
-				<p style="color: var(--ink-soft);"><em>Add impact details here.</em></p>
+				<ul style="color: var(--ink-soft); padding-left: 1.2rem;">
+					<li>Built a complete, hardware-accelerated rendering pipeline from a blank Visual Studio project within a single course term.</li>
+					<li>Demonstrates low-level graphics programming fundamentals (device/swap chain management, shader authoring, PBR shading, and post-processing) without relying on a pre-built engine.</li>
+				</ul>
 			</div>
 		</section>
 	</main>
@@ -140,6 +143,42 @@
 		</div>
 	</footer>
 
+
+	<div class="lightbox" id="lightbox" aria-hidden="true">
+		<button class="lightbox-close" id="lightboxClose" aria-label="Close image">\&times;</button>
+		<img src="" alt="" id="lightboxImg" />
+	</div>
+
 	<script src="assets/js/main.js" defer></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			var lightbox = document.getElementById('lightbox');
+			var lightboxImg = document.getElementById('lightboxImg');
+			var closeBtn = document.getElementById('lightboxClose');
+
+			function openLightbox(img) {
+				lightboxImg.src = img.src;
+				lightboxImg.alt = img.alt;
+				lightbox.classList.add('is-open');
+				lightbox.setAttribute('aria-hidden', 'false');
+			}
+			function closeLightbox() {
+				lightbox.classList.remove('is-open');
+				lightbox.setAttribute('aria-hidden', 'true');
+				lightboxImg.src = '';
+			}
+
+			document.querySelectorAll('.masonry-gallery img').forEach(function (img) {
+				img.addEventListener('click', function () { openLightbox(img); });
+			});
+			closeBtn.addEventListener('click', closeLightbox);
+			lightbox.addEventListener('click', function (e) {
+				if (e.target === lightbox) closeLightbox();
+			});
+			document.addEventListener('keydown', function (e) {
+				if (e.key === 'Escape') closeLightbox();
+			});
+		});
+	</script>
 </body>
 </html>
