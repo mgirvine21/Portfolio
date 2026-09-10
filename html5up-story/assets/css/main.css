@@ -89,10 +89,6 @@ h3 { font-size: 1.3rem; }
 p { margin: 0 0 1em; max-width: 62ch; }
 p:last-child { margin-bottom: 0; }
 
-ul li::marker {
-	content: "✦ "
-}
-
 .eyebrow {
 	font-family: var(--font-pixel);
 	font-size: 0.85rem;
@@ -216,14 +212,18 @@ ul li::marker {
 	list-style: none;
 	margin: 1.5rem 0;
 	padding: 0;
-	border-left: 2px solid var(--line);
 	display: grid;
 	gap: 0.5rem;
 }
-.hero-facts li {
+.hero-facts li{
 	padding-left: 1rem;
 	font-size: 0.95rem;
 	color: var(--ink-soft);
+}
+.hero-facts li::marker, 
+.timeline-what li::marker,
+.feature-list li::marker {
+	content: "✦ "
 }
 .hero-facts a { color: var(--violet); text-decoration: underline; text-underline-offset: 2px; }
 .hero-actions { display: flex; gap: 0.9rem; flex-wrap: wrap; margin: 1.75rem 0; }
@@ -473,7 +473,7 @@ ul li::marker {
 /* ---------- 12. Motion & responsive ---------- */
 
 /* Guard against any single element forcing horizontal scroll */
-html, body { overflow-x: hidden; }
+html, body { overflow-x: clip; }
 img, svg { max-width: 100%; height: auto; }
 
 /* ~1024px — tablet: tighten the outer rhythm, nothing restructures yet */
@@ -549,7 +549,6 @@ img, svg { max-width: 100%; height: auto; }
 	.hero-actions .button,
 	.contact-links .button { width: 100%; text-align: center; }
 
-	.hero-facts { border-left-width: 2px; }
 	.hero-facts li { font-size: 0.9rem; }
 
 	.about-grid { gap: 1.75rem; }
