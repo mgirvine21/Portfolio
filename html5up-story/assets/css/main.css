@@ -7,7 +7,7 @@
    4. Header / nav
    5. Hero
    6. About / skills
-   7. Experience timeline
+   7. Experience timeline (collapsible)
    8. Projects (spotlights + grid)
    9. Galleries
    10. Contact / footer
@@ -301,7 +301,7 @@ p:last-child { margin-bottom: 0; }
 	color: var(--ink);
 }
 
-/* ---------- 7. Experience timeline ---------- */
+/* ---------- 7. Experience timeline (collapsible) ---------- */
 .timeline {
 	list-style: none;
 	margin: 1.75rem 0 0;
@@ -309,30 +309,83 @@ p:last-child { margin-bottom: 0; }
 	border-left: 2px solid var(--line);
 }
 .timeline-item {
-	display: grid;
-	grid-template-columns: 190px 1fr;
-	gap: 2rem;
-	padding: 0 0 2.5rem 2rem;
+	padding: 0 0 0 2rem;
 	position: relative;
 }
 .timeline-item::before {
 	content: "";
 	position: absolute;
 	left: -7px;
-	top: 0.3rem;
+	top: 1.15rem;
 	width: 12px;
 	height: 12px;
 	border-radius: 50%;
 	background: var(--gold);
 	border: 2px solid var(--bg-alt);
 }
-.timeline-item:last-child { padding-bottom: 0; }
+.timeline-details {
+	border-bottom: 1px solid var(--line);
+}
+.timeline-item:last-child .timeline-details { border-bottom: none; }
+
+/* Reset native <details>/<summary> chrome so it matches the site style */
+.timeline-summary {
+	list-style: none;
+	cursor: pointer;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	column-gap: 0.85rem;
+	row-gap: 0.2rem;
+	padding: 0.85rem 1.75rem 0.85rem 0;
+	position: relative;
+}
+.timeline-summary::-webkit-details-marker { display: none; }
+.timeline-summary:focus-visible { outline-offset: 4px; }
+
 .timeline-date {
+	order: 0;
 	font-family: var(--font-pixel);
 	font-size: 0.8rem;
 	color: var(--violet);
+	white-space: nowrap;
 }
-.timeline-role { color: var(--ink-soft); font-weight: 500; margin-bottom: 0.6em; }
+.timeline-title {
+	order: 1;
+	font-family: var(--font-display);
+	font-weight: 600;
+	font-size: 1.1rem;
+	transition: color 0.2s ease;
+}
+.timeline-summary:hover .timeline-title { color: var(--header); }
+.timeline-role {
+	order: 2;
+	flex-basis: 100%;
+	color: var(--ink-soft);
+	font-weight: 500;
+	font-size: 0.92rem;
+}
+
+/* Chevron indicator: closed points down, open points up */
+.timeline-summary::after {
+	content: "";
+	order: 3;
+	position: absolute;
+	right: 0.15rem;
+	top: 1.35rem;
+	width: 9px;
+	height: 9px;
+	border-right: 2px solid var(--ink-soft);
+	border-bottom: 2px solid var(--ink-soft);
+	transform: rotate(45deg);
+	transition: transform 0.2s ease;
+}
+.timeline-details[open] .timeline-summary::after {
+	transform: rotate(-135deg);
+	top: 1.55rem;
+}
+
+.timeline-what { padding: 0 0 1.15rem; }
 .timeline-what ul { margin: 0; padding-left: 1.2rem; color: var(--ink-soft); }
 .timeline-what li { margin-bottom: 0.4em; }
 
@@ -380,7 +433,7 @@ p:last-child { margin-bottom: 0; }
 	font-weight: 500;
 }
 
-.side-projects { margin-top: 3rem; }
+.side-projects { margin-top: 0; }
 .side-projects h3 { margin-bottom: 1.5rem; }
 .project-grid {
 	display: grid;
@@ -429,6 +482,13 @@ p:last-child { margin-bottom: 0; }
 }
 .gallery-item img { width: 100%; height: 100%; object-fit: contain; transition: transform 0.4s ease; }
 .gallery-item:hover img { transform: scale(1.06); }
+
+.flipped-image {
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+}   
 
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
@@ -498,9 +558,6 @@ img, svg { max-width: 100%; height: auto; }
 	.spotlight-reverse .spotlight-media,
 	.spotlight-reverse .spotlight-copy { order: initial; }
 	.spotlight-media img { aspect-ratio: 16 / 10; }
-
-	.timeline-item { grid-template-columns: 1fr; gap: 0.35rem; }
-	.timeline-date { display: inline-block; margin-bottom: 0.35rem; }
 }
 
 /* ~720px — nav collapses to a menu, section rhythm tightens further */
@@ -558,7 +615,8 @@ img, svg { max-width: 100%; height: auto; }
 	.spotlight-copy h3 { font-size: 1.5rem; }
 
 	.timeline { margin-top: 1.25rem; }
-	.timeline-item { padding-bottom: 1.25rem; }
+	.timeline-summary { padding-top: 0.7rem; padding-bottom: 0.7rem; }
+	.timeline-title { font-size: 1rem; }
 
 	.gallery-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 0.6rem; }
 	.project-grid { grid-template-columns: 1fr; }
