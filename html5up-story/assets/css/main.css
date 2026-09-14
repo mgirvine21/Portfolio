@@ -765,6 +765,30 @@ img, svg { max-width: 100%; height: auto; }
 	gap: 1.5rem;
 }
 
+/* Full-width, larger embed specifically for playable p5.js sketches.
+   Keeps image-based case-hero pages untouched. */
+.case-hero:has(.embed-frame-sketch) {
+	grid-template-columns: 1fr;
+	max-width: 1004px;
+	margin: 0 auto;
+	gap: 2.5rem;
+}
+.case-hero:has(.embed-frame-sketch) .case-hero-media {
+	order: 1;
+}
+.embed-frame-sketch {
+	aspect-ratio: 16 / 10;
+	width: 100%;
+	max-width: none; /* now bounded by the parent's 820px instead */
+	margin: 0;
+}
+
+@media (max-width: 900px) {
+	.case-hero:has(.embed-frame-sketch) .case-hero-media {
+		order: 1;
+	}
+}
+
 @media (max-width: 720px) {
 	.embed-grid { gap: 1rem; }
 }
