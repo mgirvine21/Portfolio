@@ -440,17 +440,24 @@ p:last-child { margin-bottom: 0; }
 	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 	gap: 1.5rem;
 }
+
 .project-card {
+	transform-style: preserve-3d;
+	will-change: transform;
+	transform: perspective(800px);
 	background: var(--surface);
 	border: 1px solid var(--line);
 	border-radius: var(--radius);
 	overflow: hidden;
 	text-decoration: none;
 	color: var(--ink);
-	transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.project-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+
+/* Remove the old translateY hover rule and replace with this so JS fully controls the transform */
+.project-card:hover { box-shadow: var(--shadow); }
+
 .project-card img {
+	transform: translateZ(20px);
 	width: 100%;
 	aspect-ratio: 4 / 3;
 	object-fit: contain;
@@ -458,6 +465,7 @@ p:last-child { margin-bottom: 0; }
 	padding: .2 rem;
 	box-sizing: border-box;
 }
+
 .project-card-body { padding: 1.1rem 1.25rem 1.4rem; }
 .project-card-role { font-size: 0.8rem; color: var(--violet); font-weight: 600; margin-bottom: 0.5em; }
 .project-card-body p:last-child { font-size: 0.9rem; color: var(--ink-soft); }
