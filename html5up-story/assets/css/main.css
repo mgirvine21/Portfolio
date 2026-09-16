@@ -470,6 +470,35 @@ p:last-child { margin-bottom: 0; }
 .project-card-role { font-size: 0.8rem; color: var(--violet); font-weight: 600; margin-bottom: 0.5em; }
 .project-card-body p:last-child { font-size: 0.9rem; color: var(--ink-soft); }
 
+.filter-bar {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	margin-bottom: 1.75rem;
+}
+.filter-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-family: var(--font-body);
+	font-weight: 600;
+	font-size: 0.9rem;
+	padding: 0.6rem 1.3rem;
+	border-radius: 999px;
+	border: 1px solid var(--header);
+	background: transparent;
+	color: var(--header);
+	cursor: pointer;
+	transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease;
+}
+.filter-button:hover { transform: translateY(-2px); background: var(--surface); }
+.filter-button.filter-active {
+	background: var(--header);
+	border-color: var(--header);
+	color: #fff;
+}
+.filter-button.filter-active:hover { background: var(--header); }
+
 /* ---------- 9. Galleries ---------- */
 .gallery-group { margin-top: 2rem; }
 .gallery-group:first-of-type { margin-top: 1.25rem; }
