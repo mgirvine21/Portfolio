@@ -10,7 +10,7 @@
    7. Experience timeline (collapsible)
    8. Projects (spotlights + grid)
    9. Galleries
-   10. Contact / footer
+   10. Contact / footer (icons)
    11. Buttons & chips
    12. Motion & responsive
    13. Case-study hero + masonry gallery + lightbox
@@ -509,6 +509,42 @@ p:last-child { margin-bottom: 0; }
 .site-footer .social-row a { border-color: rgba(255,255,255,0.25); color: rgba(255,255,255,0.75); }
 .footer-note { margin: 0; font-size: 0.85rem; }
 
+.icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-color: currentColor;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
+.icon-linkedin  { -webkit-mask-image: url('../../images/icons/linkedin.png'); mask-image: url('../../images/icons/linkedin.png'); }
+.icon-itch      { -webkit-mask-image: url('../../images/icons/itch.png'); mask-image: url('../../images/icons/itch.png'); }
+.icon-github    { -webkit-mask-image: url('../../images/icons/github.png'); mask-image: url('../../images/icons/github.png'); }
+.icon-instagram { -webkit-mask-image: url('../../images/icons/instagram.png'); mask-image: url('../../images/icons/instagram.png'); }
+.icon-x         { -webkit-mask-image: url('../../images/icons/twitter.png'); mask-image: url('../../images/icons/twitter.png'); }
+.icon-mail      { -webkit-mask-image: url('../../images/icons/gmail.png'); mask-image: url('../../images/icons/gmail.png'); }
+
+.social-row a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px; /* rounded square — tweak this value to taste */
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #5f8b85;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.social-row a:hover {
+    background-color: #6fb3a8;
+    transform: translateY(-2px);
+}
 /* ---------- 11. Buttons & chips ---------- */
 .button {
 	display: inline-flex;
