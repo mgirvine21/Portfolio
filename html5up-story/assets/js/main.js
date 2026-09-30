@@ -16,6 +16,24 @@ if (navToggle && primaryNav) {
 	});
 }
 
+// Click-to-play game embed
+const gameEmbed = document.getElementById('gameEmbed');
+const gameLaunch = document.getElementById('gameLaunch');
+
+if (gameEmbed && gameLaunch) {
+	gameLaunch.addEventListener('click', () => {
+		const frame = document.createElement('iframe');
+		frame.src = gameEmbed.dataset.src;
+		frame.title = 'Illuminate - playable game build';
+		frame.allow = 'autoplay; fullscreen; gamepad';
+		frame.allowFullscreen = true;
+		frame.addEventListener('load', () => frame.focus());
+
+		gameEmbed.classList.add('is-playing');
+		gameLaunch.replaceWith(frame);
+	});
+}
+
 // Gallery reveal-on-scroll (single deliberate motion moment, not per-card)
 const revealTargets = document.querySelectorAll('.reveal');
 

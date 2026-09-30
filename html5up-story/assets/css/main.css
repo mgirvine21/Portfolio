@@ -21,7 +21,7 @@
 :root {
 	--bg: #eef3ec;
 	--bg-alt: #dfe9df;
-	--surface: #f6faf4;
+	--surface: #dfe7db80;
 	--header: #5f8b85;
 	--header-ink: #eef3ec;
 	--ink: #23343a;
@@ -98,7 +98,33 @@ p:last-child { margin-bottom: 0; }
 }
 
 /* ---------- 3. Layout helpers ---------- */
-.section { padding: 2.5rem 0; }
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+.section { padding: 4.5rem 0; }
+
+/* Star field sits above section backgrounds but beneath all content. */
+.bg-stars {
+	position: fixed;
+	inset: 0;
+	z-index: 0;
+	pointer-events: none;
+	mix-blend-mode: multiply;
+}
+.section-inner,
+.hero-inner {
+	position: relative;
+	z-index: 1;
+}
 .section-alt { background: var(--bg-alt); }
 .section-inner {
 	max-width: var(--max);
@@ -215,16 +241,33 @@ p:last-child { margin-bottom: 0; }
 	display: grid;
 	gap: 0.5rem;
 }
-.hero-facts li{
-	padding-left: 1rem;
+.hero-facts li {
+	position: relative;
+	padding-left: 1.35rem;
 	font-size: 0.95rem;
 	color: var(--ink-soft);
 }
-.hero-facts li::marker, 
-.timeline-what li::marker,
-.feature-list li::marker {
-	content: "✦ "
+.timeline-what ul,
+.feature-list {
+	list-style: none;
 }
+.timeline-what li,
+.feature-list li {
+	position: relative;
+}
+.hero-facts li::before,
+.timeline-what li::before,
+.feature-list li::before {
+	content: "\2726";
+	position: absolute;
+	left: -1.15rem;
+	top: 0;
+	color: var(--violet);
+	font-size: 0.85em;
+	line-height: inherit;
+}
+.hero-facts li::before { left: 0.1rem; }
+.feature-list li { break-inside: avoid; }
 .hero-facts a { color: var(--violet); text-decoration: underline; text-underline-offset: 2px; }
 .hero-actions { display: flex; gap: 0.9rem; flex-wrap: wrap; margin: 1.75rem 0; }
 
@@ -429,8 +472,165 @@ p:last-child { margin-bottom: 0; }
 .spotlight-copy p { color: var(--ink-soft); }
 .spotlight-meta {
 	font-size: 0.85rem;
-	color: var(--gold);
+	color: var(--violet);
+	font-weight: 600;
+	letter-spacing: 0.01em;
+}
+
+/* Current passion project */
+.section-now {
+	background: #1b1d33;
+	color: #e7e6f3;
+	position: relative;
+	overflow: hidden;
+}
+.section-now::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(60% 70% at 25% 40%, rgba(124, 111, 166, 0.35), transparent 70%);
+	pointer-events: none;
+}
+.section-now .section-inner { position: relative; }
+.section-now .eyebrow { color: var(--gold); }
+.section-now h2 { color: #fff; margin: 0; }
+.section-now .now-copy p { color: rgba(231, 230, 243, 0.82); }
+.section-now .spotlight-meta { color: var(--gold); }
+.section-now .role-tags span { background: rgba(255, 255, 255, 0.1); color: #fff; }
+.section-now .button-ghost { background: #26294a; border-color: rgba(255, 255, 255, 0.28); color: #fff; box-shadow: none; }
+.section-now .button-ghost:hover { background: #30345c; border-color: rgba(255, 255, 255, 0.45); }
+
+.now-header {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	gap: 1rem;
+	flex-wrap: wrap;
+	margin-bottom: 2rem;
+}
+.status-pill {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.55rem;
+	margin: 0;
+	padding: 0.4rem 0.9rem;
+	border-radius: 999px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	font-size: 0.85rem;
 	font-weight: 500;
+	color: #e7e6f3;
+}
+.status-dot {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background: var(--gold);
+	box-shadow: 0 0 0 0 rgba(239, 219, 111, 0.6);
+	animation: status-pulse 2s ease-out infinite;
+}
+@keyframes status-pulse {
+	70% { box-shadow: 0 0 0 8px rgba(239, 219, 111, 0); }
+	100% { box-shadow: 0 0 0 0 rgba(239, 219, 111, 0); }
+}
+
+.now-grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+	gap: 2.5rem;
+	align-items: start;
+}
+.game-embed {
+	position: relative;
+	aspect-ratio: 16 / 10;
+	border-radius: var(--radius);
+	overflow: hidden;
+	background: #0e0f1d;
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.7);
+}
+.game-embed iframe {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+.game-launch {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	border: 0;
+	background: none;
+	cursor: pointer;
+	color: #fff;
+	font: inherit;
+}
+.game-launch img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	image-rendering: pixelated;
+	transition: transform 0.4s ease, filter 0.4s ease;
+	filter: brightness(0.7);
+}
+.game-launch:hover img,
+.game-launch:focus-visible img { transform: scale(1.03); filter: brightness(0.55); }
+.game-launch:focus-visible { outline: 3px solid var(--gold); outline-offset: -3px; }
+.game-launch-overlay {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.6rem;
+	text-align: center;
+}
+.game-launch-icon {
+	width: 4.5rem;
+	height: 4.5rem;
+	border-radius: 50%;
+	background: var(--gold);
+	position: relative;
+	box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.6);
+	transition: transform 0.25s ease;
+}
+.game-launch-icon::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 54%;
+	transform: translate(-50%, -50%);
+	border-style: solid;
+	border-width: 0.8rem 0 0.8rem 1.3rem;
+	border-color: transparent transparent transparent #2a2205;
+}
+.game-launch:hover .game-launch-icon { transform: scale(1.08); }
+.game-launch-label {
+	font-family: var(--font-pixel);
+	font-size: 1.05rem;
+	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+.game-launch-hint { font-size: 0.8rem; color: rgba(255, 255, 255, 0.75); }
+
+.now-copy .role-tags { margin-top: 0; }
+.now-notes {
+	margin: 1.25rem 0;
+	padding: 1rem 1.1rem;
+	list-style: none;
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	font-size: 0.88rem;
+	color: rgba(231, 230, 243, 0.8);
+	display: grid;
+	gap: 0.35rem;
+}
+.now-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem; }
+
+@media (max-width: 900px) {
+	.now-grid { grid-template-columns: 1fr; gap: 1.75rem; }
 }
 
 .side-projects { margin-top: 0; }
@@ -537,8 +737,8 @@ p:last-child { margin-bottom: 0; }
 .contact-inner { display: flex; flex-direction: column; align-items: center; }
 .contact-inner p { color: rgba(255,255,255,0.85); }
 .contact-links { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem; }
-.section-contact .button-ghost { border-color: rgba(255,255,255,0.5); color: #fff; }
-.section-contact .button-ghost:hover { background: rgba(255,255,255,0.12); }
+.section-contact .button-ghost { background: #557d77; border-color: rgba(255,255,255,0.45); color: #fff; box-shadow: none; }
+.section-contact .button-ghost:hover { background: #4b706b; border-color: rgba(255,255,255,0.7); }
 
 .site-footer { background: var(--ink); color: rgba(255,255,255,0.75); padding: 2.5rem 0; }
 .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
@@ -597,10 +797,10 @@ p:last-child { margin-bottom: 0; }
 }
 .button:hover { transform: translateY(-2px); }
 .button-primary { background: var(--gold); color: #2a2205; }
-.button-primary:hover { background: #a17f27; }
-.button-ghost { border-color: var(--line); color: var(--ink); }
-.button-ghost:hover { background: var(--surface); }
-.button-outline { border-color: var(--header); color: var(--header); padding: 0.6rem 1.3rem; font-size: 0.9rem; }
+.button-primary:hover { background: #e2c94a; }
+.button-ghost { background: var(--surface); border-color: var(--line); color: var(--ink); box-shadow: 0 1px 2px rgba(23, 40, 40, 0.06); }
+.button-ghost:hover { background: #fff; border-color: rgba(35, 52, 58, 0.28); }
+.button-outline { background: var(--surface); border-color: var(--header); color: #3f6863; padding: 0.6rem 1.3rem; font-size: 0.9rem; }
 .button-outline:hover { background: var(--header); color: #fff; }
 
 /* ---------- 12. Motion & responsive ---------- */
@@ -611,7 +811,7 @@ img, svg { max-width: 100%; height: auto; }
 
 /* ~1024px — tablet: tighten the outer rhythm, nothing restructures yet */
 @media (max-width: 1024px) {
-	.section { padding: 2.25rem 0; }
+	.section { padding: 3.5rem 0; }
 	.hero-inner { gap: 2rem; }
 	.spotlight { gap: 2rem; }
 	.about-grid { gap: 2rem; }
@@ -671,7 +871,7 @@ img, svg { max-width: 100%; height: auto; }
 
 /* ~560px — small phones: stack action groups, simplify spacing */
 @media (max-width: 560px) {
-	.section { padding: 1.75rem 0; }
+	.section { padding: 2.75rem 0; }
 	.section-inner { padding: 0 1.1rem; }
 
 	.hero-actions,
