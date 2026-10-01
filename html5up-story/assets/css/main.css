@@ -10,7 +10,7 @@
    7. Experience timeline (collapsible)
    8. Projects (spotlights + grid)
    9. Galleries
-   10. Contact / footer (icons)
+   10. Contact /a footer (icons)
    11. Buttons & chips
    12. Motion & responsive
    13. Case-study hero + masonry gallery + lightbox
@@ -116,9 +116,9 @@ p:last-child { margin-bottom: 0; }
 .bg-stars {
 	position: fixed;
 	inset: 0;
-	z-index: 0;
+	z-index: 1;
 	pointer-events: none;
-	mix-blend-mode: multiply;
+	/*mix-blend-mode: multiply;*/
 }
 .section-inner,
 .hero-inner {
@@ -802,6 +802,9 @@ p:last-child { margin-bottom: 0; }
 .button-ghost:hover { background: #fff; border-color: rgba(35, 52, 58, 0.28); }
 .button-outline { background: var(--surface); border-color: var(--header); color: #3f6863; padding: 0.6rem 1.3rem; font-size: 0.9rem; }
 .button-outline:hover { background: var(--header); color: #fff; }
+.button-row { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+.button-with-icon { gap: 0.55rem; }
+.button-with-icon .icon { width: 1.2em; height: 1.2em; }
 
 /* ---------- 12. Motion & responsive ---------- */
 

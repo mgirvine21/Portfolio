@@ -49,9 +49,9 @@
 						<span>Graphics Engine Developer</span><span>Rendering Programmer</span>
 					</p>
 
-					<div class="chip-row" style="margin: 1rem 0 2.5rem;">
+					<ul class="chip-row" style="margin: 1rem 0 2.5rem;">
 						<li>DirectX 11</li><li>C++</li><li>HLSL</li><li>Dear ImGui</li><li>Visual Studio</li><li>GitHub</li>
-					</div>
+					</ul>
 
 					<p style="max-width: 72ch; font-size: 1.05rem; color: var(--ink-soft);">
 						<strong>Overview:</strong> A fully functional real-time 3D graphics engine built from
@@ -62,12 +62,46 @@
 						hardware-accelerated build.
 					</p>
 
-					<a href="https://github.com/mgirvine21/D3D11Starter" target="_blank" rel="noopener" class="button button-outline" style="margin-top: 1rem;">View on GitHub</a>
+					<div class="button-row" style="margin-top: 1.25rem;">
+						<a href="https://github.com/mgirvine21/D3D11Starter" target="_blank" rel="noopener" class="button button-outline button-with-icon">
+							<span class="icon icon-github" aria-hidden="true"></span>View on GitHub<span class="sr-only"> (opens in a new tab)</span>
+						</a>
+					</div>
 				</div>
 
 				<div class="case-hero-media case-hero-media-contain">
-					<img src="images/irvine_imgs/PROJECTS/ENGINE/project-graphics-engine.gif" alt="Graphics Engine" loading="lazy"/> 
-					
+					<img src="images/irvine_imgs/PROJECTS/ENGINE/project-graphics-engine.gif" alt="Real-time rendering demo from the custom DirectX 11 graphics engine" loading="lazy" />
+				</div>
+			</div>
+		</section>
+
+		<!-- NEW: how-to section (outside the hero grid) -->
+		<section class="section" style="padding: 1.5rem 0 3rem;">
+			<div class="section-inner howto-grid">
+				<div class="howto">
+					<h3>Explore the Engine</h3>
+					<ul class="feature-list">
+						<li><strong>Move:</strong> WASD, plus Space / X for up and down</li>
+						<li><strong>Look:</strong> hold left mouse button and drag</li>
+						<li><strong>Tweak:</strong> ImGui panels control cameras, entities, lights, fog, blur, and a shadow-map preview</li>
+						<li><strong>Quit:</strong> Esc</li>
+					</ul>
+				</div>
+
+				<div class="howto">
+					<h3>Run It Locally <span class="howto-note">(Windows)</span></h3>
+					<ol>
+						<li>Open <code>D3D11Starter.sln</code> in Visual Studio 2022 (Desktop development with C++, Windows 10 SDK).</li>
+						<li>Restore NuGet packages (DirectXTK).</li>
+						<li>Select <strong>x64 / Debug</strong>, then build and run.</li>
+					</ol>
+					<details class="howto-trouble">
+						<summary>Troubleshooting</summary>
+						<ul class="feature-list">
+							<li>Include-path error: remove or update the machine-specific ImGui path in the project file.</li>
+							<li>Missing resources: keep the compiled <code>.cso</code> shaders beside the executable and the <code>Assets</code> folder two levels below it.</li>
+						</ul>
+					</details>
 				</div>
 			</div>
 		</section>
@@ -94,17 +128,26 @@
 		<section class="section">
 			<div class="section-inner">
 				<h2>Contributions</h2>
+
 				<ul class="feature-list" style="color: var(--ink-soft); padding-left: 1.2rem;">
 					<li>Architected a real-time 3D rendering pipeline from scratch in C++ and DirectX 11 - devices, swap chains, render targets, and a custom OBJ mesh loader with material support.</li>
 					<li>Authored HLSL shaders implementing physically-based rendering (PBR) with albedo, normal maps, and cube-map reflections, plus a dynamic shadow mapping system.</li>
-					<div class="masonry-gallery reveal">
-						<img src="images/irvine_imgs/PROJECTS/ENGINE/project-graphics-small-light.gif" alt="Real-time rendering demo from the custom DirectX 11 graphics engine" loading="lazy" style="border-radius: var(--radius); object-fit: cover;" />
-					</div>
+				</ul>
+
+				<div class="masonry-gallery reveal">
+					<img src="images/irvine_imgs/PROJECTS/ENGINE/project-graphics-small-light.gif" alt="Dynamic lighting demo from the custom DirectX 11 graphics engine" loading="lazy" style="border-radius: var(--radius); object-fit: cover;" />
+				</div>
+
+				<ul class="feature-list" style="color: var(--ink-soft); padding-left: 1.2rem;">
 					<li>Built a full post-processing suite: screen-space box blur and a multi-mode fog system (linear/smoothstep/exponential, with optional height-based falloff), all runtime-adjustable.</li>
-					<div class="masonry-gallery reveal">
-						<img src="images/irvine_imgs/PROJECTS/ENGINE/project-graphics-small-blur.gif" alt="Real-time rendering demo from the custom DirectX 11 graphics engine" loading="lazy" style="border-radius: var(--radius); object-fit: cover;" />
-						<img src="images/irvine_imgs/PROJECTS/ENGINE/project-graphics-small-fog.gif" alt="Real-time rendering demo from the custom DirectX 11 graphics engine" loading="lazy" style="border-radius: var(--radius); object-fit: cover;" />
-					</div>
+				</ul>
+
+				<div class="masonry-gallery reveal">
+					<img src="images/irvine_imgs/PROJECTS/ENGINE/project-graphics-small-blur.gif" alt="Box blur post-processing demo from the custom DirectX 11 graphics engine" loading="lazy" style="border-radius: var(--radius); object-fit: cover;" />
+					<img src="images/irvine_imgs/PROJECTS/ENGINE/project-graphics-small-fog.gif" alt="Fog system demo from the custom DirectX 11 graphics engine" loading="lazy" style="border-radius: var(--radius); object-fit: cover;" />
+				</div>
+
+				<ul class="feature-list" style="color: var(--ink-soft); padding-left: 1.2rem;">
 					<li>Integrated Dear ImGui for a live debug UI, letting scene, shader, and post-processing parameters be tuned in real time during development.</li>
 					<li>Managed the full content pipeline [texture loading, environment setup, camera system with real-time navigation] supporting a playable, hardware-accelerated build.</li>
 				</ul>
@@ -138,7 +181,7 @@
 
 
 	<div class="lightbox" id="lightbox" aria-hidden="true">
-		<button class="lightbox-close" id="lightboxClose" aria-label="Close image">\&times;</button>
+		<button class="lightbox-close" id="lightboxClose" aria-label="Close image">&times;</button>
 		<img src="" alt="" id="lightboxImg" />
 	</div>
 
