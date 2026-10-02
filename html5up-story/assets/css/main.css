@@ -15,6 +15,7 @@
    12. Motion & responsive
    13. Case-study hero + masonry gallery + lightbox
    14. Embeds (video / playable demos)
+   15. How-to (Explore / Run locally)
    ========================================================= */
 
 /* ---------- 1. Tokens & reset ---------- */
@@ -1067,4 +1068,45 @@ img, svg { max-width: 100%; height: auto; }
 
 @media (max-width: 720px) {
 	.embed-grid { gap: 1rem; }
+}
+
+/* ---------- 15. How-to (Explore / Run locally) ---------- */
+.howto-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 2.5rem;
+	align-items: start;
+}
+.howto h3 { margin-bottom: 0.75rem; }
+.howto-note {
+	font-family: var(--font-body);
+	font-size: 0.85rem;
+	font-weight: 500;
+	color: var(--ink-soft);
+}
+.howto ul,
+.howto ol {
+	margin: 0;
+	padding-left: 1.2rem;
+	color: var(--ink-soft);
+}
+.howto li { margin-bottom: 0.4em; }
+.howto code {
+	font-size: 0.9em;
+	background: var(--bg-alt);
+	padding: 0.1em 0.4em;
+	border-radius: 6px;
+}
+.howto-trouble {
+	margin-top: 1rem;
+	color: var(--ink-soft);
+}
+.howto-trouble summary {
+	cursor: pointer;
+	font-weight: 500;
+}
+.howto-trouble[open] summary { margin-bottom: 0.5rem; }
+
+@media (max-width: 900px) {
+	.howto-grid { grid-template-columns: 1fr; gap: 1.75rem; }
 }
