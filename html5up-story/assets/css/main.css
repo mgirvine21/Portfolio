@@ -16,6 +16,7 @@
    13. Case-study hero + masonry gallery + lightbox
    14. Embeds (video / playable demos)
    15. How-to (Explore / Run locally)
+   16. Game detail page (illuminate.html)
    ========================================================= */
 
 /* ---------- 1. Tokens & reset ---------- */
@@ -807,6 +808,17 @@ p:last-child { margin-bottom: 0; }
 .button-with-icon { gap: 0.55rem; }
 .button-with-icon .icon { width: 1.2em; height: 1.2em; }
 
+.section-now .button-outline {
+	background: transparent;
+	border-color: rgba(255, 255, 255, 0.4);
+	color: #fff;
+}
+.section-now .button-outline:hover {
+	background: rgba(255, 255, 255, 0.12);
+	border-color: rgba(255, 255, 255, 0.7);
+	color: #fff;
+}
+
 /* ---------- 12. Motion & responsive ---------- */
 
 /* Guard against any single element forcing horizontal scroll */
@@ -1109,4 +1121,80 @@ img, svg { max-width: 100%; height: auto; }
 
 @media (max-width: 900px) {
 	.howto-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+}
+
+/* ---------- 16. Game detail page (illuminate.html) ----------
+   Append to the end of main.css. Replaces the inline styles used on
+   peaceland.html so the layout can respond at small screen sizes. */
+.section-original { background: #2b2850; color: #e7e6f3; }
+.section-original .eyebrow { color: var(--gold); }
+.section-original h2 { color: #fff; }
+.section-original .case-lede { color: rgba(231, 230, 243, 0.82); }
+
+.section-case-top { padding: 2.25rem 0 0.75rem; }
+.case-back { margin-bottom: 2rem; }
+.case-title {
+	font-family: var(--font-display);
+	font-size: clamp(2.4rem, 5vw, 3.4rem);
+	margin-bottom: 0.3em;
+}
+.case-lede { max-width: 60ch; font-size: 1.05rem; color: var(--ink-soft); }
+.case-sub { max-width: 60ch; font-size: 0.95rem; color: var(--ink-soft); margin-top: 1rem; }
+.case-chips { margin: 1rem 0 2rem; }
+.case-actions { margin-top: 1.25rem; }
+.case-heading-spaced { margin-top: 2.5rem; }
+
+/* Status pill was written for the dark "now building" band; give it a
+   light-background version for the case-study hero. */
+.case-hero .status-pill {
+	margin-top: 1rem;
+	color: var(--ink);
+	background: var(--surface);
+	border-color: var(--line);
+}
+.case-hero .status-dot { background: #d4b83a; }
+
+/* Pixel-art hero: match the screenshot's 16:10 ratio (no cropping) and
+   keep the pixels crisp instead of blurry when scaled. */
+.case-hero-media-pixel img {
+	aspect-ratio: 16 / 10;
+	image-rendering: pixelated;
+}
+
+/* Two-column feature list that collapses to one column on phones. */
+.feature-list-cols {
+	columns: 2;
+	column-gap: 2.5rem;
+	padding-left: 1.2rem;
+	color: var(--ink-soft);
+}
+.case-list { padding-left: 1.2rem; color: var(--ink-soft); }
+
+/* Playable build band, dark to match the homepage "Current Passion Project". */
+.section-play { background: #1b1d33; color: #e7e6f3; }
+.section-play .eyebrow { color: var(--gold); }
+.section-play h2 { color: #fff; }
+.section-play .game-embed { max-width: 960px; margin: 1.5rem auto 0; }
+.play-note {
+	max-width: 960px;
+	margin: 1rem auto 0;
+	font-size: 0.9rem;
+	color: rgba(231, 230, 243, 0.75);
+}
+.play-note a { color: var(--gold); }
+
+/* itch.io widget (used if you add the original game). */
+.itch-embed {
+	display: block;
+	width: 552px;
+	max-width: 100%;
+	height: 167px;
+	border: 0;
+	margin-top: 1.25rem;
+}
+
+@media (max-width: 720px) {
+	.section-case-top { padding: 1.5rem 0 0.5rem; }
+	.feature-list-cols { columns: 1; }
+	.section-play .game-embed { margin-top: 1rem; }
 }
